@@ -1,23 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <div className="profile-container">
+        <img src="/alice-perfil.png" alt="Alice Barcelos" className="profile-image" />
+
+
+        <h1 className="profile-name">Alice Barcelos</h1>
+        <p className="profile-description">
+          🎥 Story Maker & Video Maker <br />
+          Registrando momentos em memórias ✨
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <div className="links-container">
+          <a
+            href="https://api.whatsapp.com/message/AC4STW4ZAAAHN1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-button whatsapp"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://seuportifolio.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-button portfolio"
+          >
+            Portfólio
+          </a>
+
+          <a
+            href="https://www.instagram.com/bliss.momentos_/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-button instagram"
+          >
+            Instagram
+          </a>
+        </div>
+
+        <footer className="footer">
+          <p>© 2025 Alice Barcelos — Story Maker</p>
+        </footer>
+      </div>
     </div>
   );
 }
