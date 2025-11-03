@@ -1,11 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Portfolio from './pages/Portfolio';
+import QuemSouEu from './pages/QuemSouEu';
+import StoryMaker from './pages/StoryMaker';
+import VideoMaker from './pages/VideoMaker';
 
-function App() {
+import { Link } from 'react-router-dom';
+
+function Home() {
   return (
     <div className="App">
       <div className="profile-container">
         <img src="/alice-perfil.png" alt="Alice Barcelos" className="profile-image" />
-
 
         <h1 className="profile-name">Alice Barcelos</h1>
         <p className="profile-description">
@@ -23,14 +29,9 @@ function App() {
             WhatsApp
           </a>
 
-          <a
-            href="https://seuportifolio.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link-button portfolio"
-          >
+          <Link to="/portfolio" className="link-button portfolio">
             Portfólio
-          </a>
+          </Link>
 
           <a
             href="https://www.instagram.com/bliss.momentos_/"
@@ -47,6 +48,20 @@ function App() {
         </footer>
       </div>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/quem-sou-eu" element={<QuemSouEu />} />
+        <Route path="/story-maker" element={<StoryMaker />} />
+        <Route path="/video-maker" element={<VideoMaker />} />
+      </Routes>
+    </Router>
   );
 }
 
