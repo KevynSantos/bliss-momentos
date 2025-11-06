@@ -53,7 +53,7 @@ function Home() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/bliss-momentos">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/portfolio" element={<Portfolio />} />
